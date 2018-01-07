@@ -8,3 +8,5 @@ class Color extends Component {
 		return <div />;
 	}
 }
+
+export default Color;

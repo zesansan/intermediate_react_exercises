@@ -9,7 +9,7 @@ class ColorForm extends Component {
 			hex: "#FFFFFF"
 		};
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handeleSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	handleChange(e) {
 		this.setState({
@@ -23,7 +23,7 @@ class ColorForm extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="wrapper">
 				<form onSubmit={this.handleSubmit}>
 					<input
 						type="text"
@@ -32,14 +32,19 @@ class ColorForm extends Component {
 						placeholder="name your color"
 						value={this.state.name}
 					/>
+					<br />
+					<label>Select Color:</label>
 					<input
 						type="color"
 						onChange={this.handleChange}
+						name="hex"
 						value={this.state.hex}
 					/>
-					<input type="submit" />
+					<br />
+					<input type="submit" value="add" />
 				</form>
 			</div>
 		);
 	}
 }
+export default ColorForm;
