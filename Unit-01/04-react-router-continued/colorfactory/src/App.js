@@ -6,25 +6,13 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    const header = (
-      <div>
-        <h1 className="App-title">Welcome to Colors</h1>
-        <Link to="/colors" className="Header-link">
-          see all colors
-        </Link>
-        <br />
-        <Link to="/colors/new" className="Header-link">
-          add new color
-        </Link>
-      </div>
-    );
     return (
       <div className="App">
         <header className="App-header">{header}</header>
         <Switch>
           <Route path="/colors/new" render={props => <ColorForm />} />
-          <Route path="/colors/:color" />
-          <Route path="/colors" />
+          <Route path="/colors/:color" render={props => <Color />} />
+          <Route path="/colors" render={props => <ColorsList />} />
           <Redirect path="/colors" />
         </Switch>
       </div>
