@@ -6,7 +6,7 @@ const Color = props => {
 	const { color } = props;
 	return (
 		<div className="Color" style={{ backgroundColor: color.hex }}>
-			<p>this is {color.color}.</p>
+			<p>this is {color.colorName}.</p>
 			<p>isn't it beautiful?</p>
 			<p>
 				<Link to="/colors">back</Link>
