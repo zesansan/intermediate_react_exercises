@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Color.css";
 
 const Color = props => {
 	const { color } = props;
