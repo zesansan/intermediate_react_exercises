@@ -5,7 +5,7 @@ class ColorForm extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: "",
+			colorName: "",
 			hex: "#FFFFFF"
 		};
 		this.handleChange = this.handleChange.bind(this);
@@ -18,8 +18,8 @@ class ColorForm extends Component {
 	}
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.addColor();
-		this.history.push("/colors");
+		this.props.addColor(this.state);
+		this.props.history.push("/colors");
 	}
 	render() {
 		return (
@@ -28,9 +28,9 @@ class ColorForm extends Component {
 					<input
 						type="text"
 						onChange={this.handleChange}
-						name="color"
+						name="colorName"
 						placeholder="name your color"
-						value={this.state.name}
+						value={this.state.colorName}
 					/>
 					<br />
 					<label>Select Color:</label>
